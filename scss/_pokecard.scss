@@ -18,7 +18,8 @@ $deck-left-offset: 40px;
 
 	&.C#{$player}#{$card} {
 		// transition: transform #{$duration}s ease-out;
-		transition: transform 1s ease-out;
+		// transition: transform 1s ease-out;
+		@include transition(transform 1s ease-out);
 		
 		&.deck {
 			top: #{$deck-top}; left: #{$deck-left-offset};
