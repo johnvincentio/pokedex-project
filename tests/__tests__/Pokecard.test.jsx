@@ -57,6 +57,21 @@ describe('<Pokecard />', () => {
 		expect(wrapper.find('div.pokecard--exp').text()).toEqual(`Exp: ${card.baseExperience}`);
 	});
 
+	it('Test Content', () => {
+		const wrapper = shallow(<Pokecard player={2} index={3} card={card} winner dealCards />);
+		
+		expect(wrapper.find('div.pokecard').hasClass('winner')).toEqual(true);
+		expect(wrapper.find('div.pokecard').hasClass('deal')).toEqual(true);
+		expect(wrapper.find('div.pokecard').hasClass(`C23`)).toEqual(true);
+
+		expect(wrapper.find('div.pokecard--image').find('img').prop('alt')).toEqual(card.name);
+
+		expect(wrapper.find('div.pokecard--name').text()).toEqual(card.name);
+
+		expect(wrapper.find('div.pokecard--type').text()).toEqual(`Type: ${card.type}`);
+		expect(wrapper.find('div.pokecard--exp').text()).toEqual(`Exp: ${card.baseExperience}`);
+	});
+
 	// describe('properties-state', () => {
 	// 	it('Renders property count', () => {
 	// 		const count = 12;
