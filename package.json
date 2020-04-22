@@ -13,7 +13,7 @@
 			"<rootDir>/tests/__tests__/"
 		],
 		"testRegex": "./tests/__tests__/.*.(js|jsx)$",
-		"setupTestFrameworkScriptFile": "<rootDir>/tests/setupTests.js",
+		"setupFilesAfterEnv": ["<rootDir>/tests/setupTests.js"],
 		"testPathIgnorePatterns": [
 			"<rootDir>/tests/__tests__/setup/"
 		],
