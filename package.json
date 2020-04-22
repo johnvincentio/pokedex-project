@@ -23,8 +23,8 @@
 		}
 	},
 	"scripts": {
-		"test-one": "npm test -- -t '<One />'",
 		"test-pokeheader": "npm test -- -t '<PokeHeader />'",
+		"test-pokecard": "npm test -- -t '<Pokecard />'",
 		"test-help": "jest --help",
 		"test": "jest",
 		"dev": "webpack --mode development --progress",

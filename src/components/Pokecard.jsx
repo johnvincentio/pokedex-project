@@ -24,7 +24,7 @@ class Pokecard extends React.Component {
 				</div>
 				<div className="pokecard--name">{name}</div>
 				<div className="pokecard--type">Type: {type}</div>
-				<div className="pokecard--exp">EXP: {baseExperience}</div>
+				<div className="pokecard--exp">Exp: {baseExperience}</div>
 			</div>
 		);
 	}
