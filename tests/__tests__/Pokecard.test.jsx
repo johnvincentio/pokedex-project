@@ -23,14 +23,8 @@ describe('<Pokecard />', () => {
 		});
 	});
 
-	/*
-	  const p = wrapper.find('.toggle-todo');
-	expect(p.text()).toBe('Buy Milk');
-	*/
-
 	describe('content', () => {
-
-		it('Test1', () => {
+		it('Test divs', () => {
 			const wrapper = shallow(<Pokecard player={1} index={2} card={card} winner={false} dealCards={false} />);
 			expect(wrapper.find('div').length).toEqual(5);
 			expect(wrapper.find('div.pokecard').length).toEqual(1);
@@ -42,7 +36,7 @@ describe('<Pokecard />', () => {
 		});
 	});
 
-	it('Test Content', () => {
+	it('Test classes', () => {
 		const wrapper = shallow(<Pokecard player={1} index={2} card={card} winner={false} dealCards={false} />);
 		
 		expect(wrapper.find('div.pokecard').hasClass('loser')).toEqual(true);
@@ -57,7 +51,7 @@ describe('<Pokecard />', () => {
 		expect(wrapper.find('div.pokecard--exp').text()).toEqual(`Exp: ${card.baseExperience}`);
 	});
 
-	it('Test Content', () => {
+	it('Test classes more', () => {
 		const wrapper = shallow(<Pokecard player={2} index={3} card={card} winner dealCards />);
 		
 		expect(wrapper.find('div.pokecard').hasClass('winner')).toEqual(true);
@@ -72,11 +66,16 @@ describe('<Pokecard />', () => {
 		expect(wrapper.find('div.pokecard--exp').text()).toEqual(`Exp: ${card.baseExperience}`);
 	});
 
-	// describe('properties-state', () => {
-	// 	it('Renders property count', () => {
-	// 		const count = 12;
-	// 		const wrapper = shallow(<Status count={count} />);
-	// 		expect(wrapper.contains(<span>{count}</span>)).toEqual(true);
-	// 	});
-	// });
+	it('Test enzyme 1', () => {
+		const wrapper = shallow(<Pokecard player={1} index={0} card={card} winner dealCards />);
+		const p = wrapper.find('.pokecard--name');
+		expect(p.text()).toBe(card.name);
+	});
+
+	it('Test enzyme 2', () => {
+		const wrapper = shallow(<Pokecard player={1} index={1} card={card} winner dealCards />);
+		const p = wrapper.find('.pokecard--name');
+		expect(p.contains(card.name)).toEqual(true);
+	});
+
 });
