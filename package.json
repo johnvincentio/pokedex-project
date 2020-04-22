@@ -9,7 +9,7 @@
 	"main": "index.js",
 	"jest": {
 		"roots": [
-			"<rootDir >/src/",
+			"<rootDir>/src/",
 			"<rootDir>/tests/__tests__/"
 		],
 		"testRegex": "./tests/__tests__/.*.(js|jsx)$",
@@ -24,6 +24,7 @@
 	},
 	"scripts": {
 		"test-one": "npm test -- -t '<One />'",
+		"test-pokeheader": "npm test -- -t '<PokeHeader />'",
 		"test-help": "jest --help",
 		"test": "jest",
 		"dev": "webpack --mode development --progress",

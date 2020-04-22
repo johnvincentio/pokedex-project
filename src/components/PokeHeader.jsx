@@ -17,7 +17,7 @@ class PokeHeader extends React.Component {
 				<div className={`pokeheader--result ${winner ? "winner" : "loser"}`}>
 					{winner ? "Winning Hand" : "Losing Hand"}
 				</div>
-				<div className="pokeheader--total">Total Experience: {total} </div>
+				<div className="pokeheader--total">Total Experience: {total}</div>
 			</div>
 		);
 	}
